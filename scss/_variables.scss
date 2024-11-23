@@ -1,0 +1,24 @@
+//// Color
+
+// Base colors
+$color-ivory: hsl(60, 20%, 94%);
+$color-gray-40: hsl(0, 0%, 40%);
+$color-gray-30: hsl(0, 0%, 30%);
+$color-near-black: hsl(0, 0%, 7%);
+
+// Text
+$body-text-color: $color-gray-30;
+$heading-color: $color-near-black;
+$attr-text-color: $color-gray-40;
+
+// Background
+$body-bg: $color-ivory;
+$footer-bg: $color-ivory;
+
+// Font-weight
+$font-weight-med: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Line-height
+$line-height-body: 1.5;
