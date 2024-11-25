@@ -1,0 +1,66 @@
+@use "variables";
+@use "mixins";
+
+////
+// Spacing
+////
+
+.u-mx-auto {
+  margin: 0 auto;
+}
+
+////
+// Sizing
+////
+
+.u-w-85 {
+  width: 85%;
+}
+
+.u-max-w-350 {
+  max-width: 350px;
+}
+
+.u-icon-area {
+  width: 24px;
+  height: auto;
+}
+
+////
+// Styles
+////
+
+.u-toggle {
+  width: 48px;
+  height: 48px;
+  border: none;
+  background-color: transparent;
+  @include mixins.justify-content();
+  @include mixins.align-items();
+}
+
+////
+// Display
+////
+
+.u-d-none {
+  display: none;
+}
+
+.u-d-block {
+  display: block;
+}
+
+.u-d-inline-flex {
+  display: inline-flex;
+}
+
+@media (min-width: 820px) {
+  .u-d-none-med {
+    display: none;
+  }
+
+  .u-d-flex-med {
+    display: flex;
+  }
+}

@@ -1,1 +1,103 @@
 @use "variables";
+////
+// Layout
+////
+
+@mixin grid-layout($columns: 1fr, $rows: auto) {
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+}
+
+@mixin justify-content($justify-content: center) {
+  justify-content: $justify-content;
+}
+
+@mixin align-items($align-items: center) {
+  align-items: $align-items;
+}
+
+////
+// Positioning
+////
+
+@mixin position-responsive(
+  $mobile-position: relative,
+  $breakpoint: 820px,
+  $responsive-position: static
+) {
+  position: $mobile-position;
+
+  @media (min-width: #{$breakpoint}) {
+    position: $responsive-position;
+  }
+}
+
+@mixin position-top-left($position: fixed, $top: 0, $left: 0) {
+  position: $position;
+  top: $top;
+  left: $left;
+}
+
+@mixin position-absolute-bottom-left($bottom: 0, $left: 0) {
+  position: absolute;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin position($position: relative) {
+  position: $position;
+}
+
+@mixin z-index($z-index: auto) {
+  z-index: $z-index;
+}
+
+@mixin width($width: auto) {
+  width: $width;
+}
+
+@mixin max-width($max-width: 400px) {
+  max-width: $max-width;
+}
+
+@mixin height($height: auto) {
+  height: $height;
+}
+
+////
+// Spacing
+////
+
+@mixin padding($padding: auto) {
+  padding: $padding;
+}
+
+////
+// Utility
+////
+
+@mixin display-responsive(
+  $mobile-display: none,
+  $query-type: min-width,
+  $breakpoint: 820px,
+  $responsive-display: block
+) {
+  display: $mobile-display;
+
+  @media (#{$query-type}: #{$breakpoint}) {
+    display: $responsive-display;
+  }
+}
+
+// focused on selectors based on state, modifier class, breakpoint, and a combo
+@mixin display-advanced($display: block) {
+  display: $display;
+}
+
+////
+// Styling
+////
+
+@mixin text-transform($text-transform: uppercase) {
+  text-transform: $text-transform;
+}

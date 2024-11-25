@@ -13,3 +13,52 @@ html {
   box-sizing: border-box;
   font-size: 12px;
 }
+
+body {
+  background-color: variables.$body-bg;
+  font-family: variables.$font-family-body;
+  font-size: variables.$body-fs;
+  line-height: variables.$line-height-body;
+  color: variables.$body-text-color;
+  font-weight: variables.$font-weight-med;
+}
+
+img {
+  display: block;
+  @include mixins.width(100%);
+  @include mixins.max-width(100%);
+  object-fit: cover;
+}
+
+button {
+  cursor: pointer;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2 {
+  font-family: variables.$font-family-heading;
+  color: variables.$heading-color;
+  line-height: variables.$line-height-heading;
+  font-weight: variables.$font-weight-semibold;
+}
+
+h1 {
+  font-size: variables.$primary-heading-fs;
+  letter-spacing: variables.$primary-heading-letter-spacing;
+}
+
+h2 {
+  font-size: variables.$secondary-heading-fs;
+  letter-spacing: variables.$secondary-heading-letter-spacing;
+  @include mixins.text-transform();
+  font-weight: variables.$font-weight-bold;
+}

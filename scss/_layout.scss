@@ -1,0 +1,12 @@
+@use "variables";
+@use "mixins";
+
+.l-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.l-flex-column {
+  display: flex;
+  flex-direction: column;
+}

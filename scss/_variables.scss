@@ -1,24 +1,106 @@
-//// Color
+////
+// Color
+////
 
-// Base colors
+// Base
+
 $color-ivory: hsl(60, 20%, 94%);
 $color-gray-40: hsl(0, 0%, 40%);
+$color-gray-35: hsl(0, 0%, 35%);
 $color-gray-30: hsl(0, 0%, 30%);
+$color-gray-17: hsl(0, 0%, 17%);
 $color-near-black: hsl(0, 0%, 7%);
 
+$color-yellow-gold: hsl(38, 92%, 30%);
+$color-yellow-gold-darker: hsl(38, 92%, 20%);
+
 // Text
+
 $body-text-color: $color-gray-30;
 $heading-color: $color-near-black;
 $attr-text-color: $color-gray-40;
 
+// Links
+
+$nav-link-mobile-color: $color-gray-17;
+$nav-link-desktop-color: $color-ivory;
+
+$section-link-color: $color-yellow-gold;
+$section-link-interactive-color: $color-yellow-gold-darker;
+
+$attr-link-color: $color-yellow-gold;
+$attr-link-interactive-color: $color-yellow-gold-darker;
+
 // Background
+
 $body-bg: $color-ivory;
+
+$nav-scroll-bg: $color-gray-17;
+$open-panel-bg: $color-ivory;
+
+$mobile-overlay: hsla(0, 0%, 7%, 0.5);
+
+$nav-btn-bg: $color-gray-17;
+$nav-btn-interactive-bg: $color-gray-35;
+
 $footer-bg: $color-ivory;
 
+////
+// Font-size
+////
+
+// 12-18px
+$body-fs: clamp(1rem, 1rem + 0.5vw, 1.5rem);
+// 18-48px
+$primary-heading-fs: clamp(1.5rem, 2rem + 3vw, 4rem);
+// 12-15.96px
+$secondary-heading-fs: clamp(1rem, 1rem + 1vw, 1.33rem);
+// 12-24px
+$nav-link-fs: clamp(1rem, 1.25rem + 0.75vw, 2rem);
+// 14.4-36px
+$section-link-fs: clamp(1.2rem, 1.5rem + 1vw, 3rem);
+// 11-14px
+$attr-fs: clamp(0.9166rem, 1rem + 0.5vw, 1.166rem);
+
+////
+// Font-family
+////
+
+$font-family-primary: "League Spartan", sans-serif;
+$font-family-body: $font-family-primary;
+$font-family-heading: $font-family-primary;
+
+////
 // Font-weight
+////
+
 $font-weight-med: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
+////
+// Letter-spacing
+////
+
+$primary-heading-letter-spacing: -1.5px;
+$secondary-heading-letter-spacing: 5px;
+$section-link-letter-spacing: 10px;
+
+////
 // Line-height
+////
+
 $line-height-body: 1.5;
+$line-height-heading: 0.95;
+
+////
+// Gap
+////
+
+$gap-xs: 8px;
+$gap-sm-med: 12px;
+$gap-sm: 16px;
+$gap-med: 20px;
+$gap-lg: 24px;
+$gap-xl: 32px;
+$gap-xxl: 40px;

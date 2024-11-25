@@ -1,2 +1,153 @@
 @use "../variables";
 @use "../mixins";
+
+.c-hero-carousel {
+  &__slide {
+    @include mixins.grid-layout(1fr, 1fr auto);
+    grid-template-areas:
+      "image"
+      "cta";
+
+    @media (min-width: 900px) {
+      @include mixins.grid-layout(1fr 0.7fr, auto);
+      grid-template-areas: "image cta";
+    }
+
+    @media (min-width: 1024px) {
+      @include mixins.grid-layout(3fr repeat(2, 1fr), auto);
+      grid-template-areas: "image cta cta";
+    }
+
+    &--active {
+      @include mixins.display-advanced(grid);
+    }
+  }
+
+  &__image-container {
+    grid-area: image;
+    @include mixins.position-responsive(relative, 900px, static);
+    @include mixins.height(100%);
+
+    @media (min-width: 900px) {
+      @include mixins.position(static);
+    }
+  }
+
+  &__image,
+  &__img {
+    @include mixins.position-responsive(relative, 900px, static);
+    @include mixins.width(100%);
+    @include mixins.height(100%);
+  }
+
+  &__cta-container {
+    grid-area: cta;
+
+    @media (min-width: 900px) {
+      @include mixins.position();
+    }
+  }
+
+  &__cta {
+    @include mixins.justify-content();
+    @include mixins.align-items(flex-start);
+    gap: variables.$gap-sm-med;
+    @include mixins.padding(56px 0 64px);
+
+    @media (min-width: 900px) {
+      @include mixins.width(90%);
+      @include mixins.max-width();
+      @include mixins.padding(64px 16px 104px);
+    }
+
+    @media (min-width: 1024px) {
+      @include mixins.padding(112px 24px 120px);
+    }
+  }
+
+  &__detail {
+    margin-block-end: 16px;
+
+    @media (min-width: 900px) {
+      margin-block-end: 8px;
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    color: variables.$section-link-color;
+    letter-spacing: variables.$section-link-letter-spacing;
+    font-weight: variables.$font-weight-semibold;
+    font-size: 1.5rem;
+    @include mixins.text-transform();
+    @include mixins.justify-content();
+    @include mixins.align-items();
+    gap: variables.$gap-xs;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  &__link:hover,
+  &__link:focus,
+  &__link:active {
+    color: variables.$section-link-interactive-color;
+    transform: scale(1.04);
+  }
+
+  &__link-arrow {
+    @include mixins.justify-content();
+    @include mixins.align-items();
+    // Switched to using em units here because this will tie the arrow's size to the font size –
+    // the arrow will scale proportionally to the link's text size (in this case, 1em = current font size)
+    @include mixins.width(3em);
+    @include mixins.height();
+    fill: currentColor;
+  }
+
+  &__nav {
+    &--image {
+      @media (max-width: 899px) {
+        @include mixins.display-advanced(flex);
+        @include mixins.justify-content();
+        @include mixins.align-items();
+        @include mixins.width(max-content);
+        @include mixins.position(absolute);
+        bottom: 0;
+        right: 0;
+      }
+    }
+
+    &--cta {
+      @include mixins.display-responsive(none, min-width, 900px, flex);
+
+      @media (min-width: 900px) {
+        @include mixins.justify-content();
+        @include mixins.align-items();
+        @include mixins.width(max-content);
+        @include mixins.position-absolute-bottom-left();
+      }
+    }
+  }
+
+  &__nav-btn {
+    background-color: variables.$nav-btn-bg;
+    color: variables.$color-ivory;
+    border: none;
+    @include mixins.padding(16px 24px);
+    transition: background-color 0.3s ease-in-out;
+
+    @media (min-width: 500px) {
+      @include mixins.padding(24px 28px);
+    }
+
+    &-angle {
+      stroke: variables.$color-ivory;
+      @include mixins.width(14px);
+      @include mixins.height(24px);
+    }
+
+    &--previous:hover,
+    &--next:hover {
+      background-color: variables.$nav-btn-interactive-bg;
+    }
+  }
+}

@@ -25,15 +25,15 @@
 
   <body>
     <header class="c-header">
-      <nav class="c-nav" role="navigation">
-        <div class="c-nav__controls-container">
+      <nav class="c-nav l-flex-row" role="navigation">
+        <div class="c-nav__controls-container l-flex-row">
           <button
-            class="c-nav__menu-toggle"
+            class="c-nav__menu-toggle l-flex-row u-toggle u-d-block u-d-none-med"
             aria-label="Open menu"
             aria-expanded="false"
           >
             <svg
-              class="c-nav__menu-toggle-icon"
+              class="c-nav__menu-toggle-icon u-icon-area"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 14"
               fill="currentColor"
@@ -42,7 +42,7 @@
             </svg>
           </button>
 
-          <a class="c-nav__logo-link" href="./index.html">
+          <a class="c-nav__logo-link l-flex-row u-mx-auto" href="./index.html">
             <svg
               class="c-nav__logo-link-icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -56,9 +56,15 @@
           </a>
         </div>
 
-        <ul class="c-nav__list" aria-hidden="true">
+        <ul
+          class="c-nav__list l-flex-row u-d-none u-d-flex-med"
+          aria-hidden="true"
+        >
           <li class="c-nav__item">
-            <button class="c-nav__close-toggle" aria-label="Close menu">
+            <button
+              class="c-nav__close-toggle u-toggle u-d-none"
+              aria-label="Close menu"
+            >
               <svg
                 class="c-nav__close-toggle-icon u-icon-area"
                 xmlns="http://www.w3.org/2000/svg"
@@ -86,11 +92,13 @@
         </ul>
       </nav>
 
-      <div class="c-overlay"></div>
+      <div class="c-overlay u-d-none"></div>
 
       <section class="c-hero-carousel">
         <!-- Slide 1 -->
-        <article class="c-hero-carousel__slide c-hero-carousel__slide--active">
+        <article
+          class="c-hero-carousel__slide u-d-none c-hero-carousel__slide--active"
+        >
           <div class="c-hero-carousel__image-container">
             <picture class="c-hero-carousel__image">
               <source
@@ -110,7 +118,9 @@
               />
             </picture>
 
-            <nav class="c-hero-carousel__nav c-hero-carousel__nav--image">
+            <nav
+              class="c-hero-carousel__nav u-d-none c-hero-carousel__nav--image l-flex-row"
+            >
               <button
                 class="c-hero-carousel__nav-btn c-hero-carousel__nav-btn--previous"
                 aria-label="Previous slide"
@@ -144,7 +154,9 @@
           </div>
 
           <div class="c-hero-carousel__cta-container">
-            <div class="c-hero-carousel__cta">
+            <div
+              class="c-hero-carousel__cta u-w-85 u-max-w-350 u-mx-auto l-flex-column"
+            >
               <h1 class="c-hero-carousel__title">
                 Discover innovative ways to decorate
               </h1>
@@ -156,7 +168,7 @@
                 and what you love.
               </p>
 
-              <a class="c-hero-carousel__link" href="#"
+              <a class="c-hero-carousel__link u-d-inline-flex" href="#"
                 >Shop now
                 <svg
                   class="c-hero-carousel__link-arrow u-d-inline-flex"
@@ -170,7 +182,9 @@
                 </svg>
               </a>
 
-              <nav class="c-hero-carousel__nav c-hero-carousel__nav-cta">
+              <nav
+                class="c-hero-carousel__nav u-d-none c-hero-carousel__nav-cta l-flex-row"
+              >
                 <button
                   class="c-hero-carousel__nav-btn c-hero-carousel__nav-btn--previous"
                   aria-label="Previous slide"
@@ -206,7 +220,7 @@
         </article>
 
         <!-- Slide 2 -->
-        <article class="c-hero-carousel__slide">
+        <article class="c-hero-carousel__slide u-d-none">
           <div class="c-hero-carousel__image-container">
             <picture class="c-hero-carousel__image">
               <source
@@ -226,7 +240,9 @@
               />
             </picture>
 
-            <nav class="c-hero-carousel__nav c-hero-carousel__nav--image">
+            <nav
+              class="c-hero-carousel__nav u-d-none c-hero-carousel__nav--image l-flex-row"
+            >
               <button
                 class="c-hero-carousel__nav-btn c-hero-carousel__nav-btn--previous"
                 aria-label="Previous slide"
@@ -260,7 +276,9 @@
           </div>
 
           <div class="c-hero-carousel__cta-container">
-            <div class="c-hero-carousel__cta">
+            <div
+              class="c-hero-carousel__cta u-w-85 u-max-w-350 u-mx-auto l-flex-column"
+            >
               <h1 class="c-hero-carousel__title">
                 We are available all across the globe
               </h1>
@@ -272,7 +290,7 @@
                 hesitate to contact us today.
               </p>
 
-              <a class="c-hero-carousel__link" href="#"
+              <a class="c-hero-carousel__link u-d-inline-flex" href="#"
                 >Shop now
                 <svg
                   class="c-hero-carousel__link-arrow u-d-inline-flex"
@@ -286,7 +304,9 @@
                 </svg>
               </a>
 
-              <nav class="c-hero-carousel__nav c-hero-carousel__nav--cta">
+              <nav
+                class="c-hero-carousel__nav u-d-none c-hero-carousel__nav--cta l-flex-row"
+              >
                 <button
                   class="c-hero-carousel__nav-btn c-hero-carousel__nav-btn--previous"
                   aria-label="Previous slide"
@@ -322,7 +342,7 @@
         </article>
 
         <!-- Slide 3 -->
-        <article class="c-hero-carousel__slide">
+        <article class="c-hero-carousel__slide u-d-none">
           <div class="c-hero-carousel__image-container">
             <picture class="c-hero-carousel__image">
               <source
@@ -342,7 +362,9 @@
               />
             </picture>
 
-            <nav class="c-hero-carousel__nav c-hero-carousel__nav--image">
+            <nav
+              class="c-hero-carousel__nav u-d-none c-hero-carousel__nav--image l-flex-row"
+            >
               <button
                 class="c-hero-carousel__nav-btn c-hero-carousel__nav-btn--previous"
                 aria-label="Previous slide"
@@ -376,7 +398,9 @@
           </div>
 
           <div class="c-hero-carousel__cta-container">
-            <div class="c-hero-carousel__cta">
+            <div
+              class="c-hero-carousel__cta u-w-85 u-max-w-350 u-mx-auto l-flex-column"
+            >
               <h1 class="c-hero-carousel__title">
                 Manufactured with the best materials
               </h1>
@@ -388,7 +412,7 @@
                 customers want for their home and office.
               </p>
 
-              <a class="c-hero-carousel__link" href="#"
+              <a class="c-hero-carousel__link u-d-inline-flex" href="#"
                 >Shop now
                 <svg
                   class="c-hero-carousel__link-arrow u-d-inline-flex"
@@ -402,7 +426,9 @@
                 </svg>
               </a>
 
-              <nav class="c-hero-carousel__nav c-hero-carousel__nav--cta">
+              <nav
+                class="c-hero-carousel__nav u-d-none c-hero-carousel__nav--cta l-flex-row"
+              >
                 <button
                   class="c-hero-carousel__nav-btn c-hero-carousel__nav-btn--previous"
                   aria-label="Previous slide"

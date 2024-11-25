@@ -1,2 +1,12 @@
 @use "../variables";
 @use "../mixins";
+
+.c-overlay {
+  @include mixins.position-top-left(fixed, 100px, 0);
+  right: 0;
+  bottom: 0;
+  background-color: variables.$mobile-overlay;
+  @include mixins.z-index(98);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}

@@ -1,0 +1,6 @@
+@use "../variables";
+@use "../mixins";
+
+.c-header {
+  @include mixins.position();
+}
