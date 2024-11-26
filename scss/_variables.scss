@@ -5,6 +5,7 @@
 // Base
 
 $color-ivory: hsl(60, 20%, 94%);
+$color-gray-85: hsl(0, 0%, 85%);
 $color-gray-40: hsl(0, 0%, 40%);
 $color-gray-35: hsl(0, 0%, 35%);
 $color-gray-30: hsl(0, 0%, 30%);
@@ -13,12 +14,14 @@ $color-near-black: hsl(0, 0%, 7%);
 
 $color-yellow-gold: hsl(38, 92%, 30%);
 $color-yellow-gold-darker: hsl(38, 92%, 20%);
+$color-yellow-gold-lighter: hsl(38, 92%, 40%);
 
 // Text
 
 $body-text-color: $color-gray-30;
 $heading-color: $color-near-black;
 $attr-text-color: $color-gray-40;
+$selection-text: $color-near-black;
 
 // Links
 
@@ -44,6 +47,8 @@ $nav-btn-bg: $color-gray-17;
 $nav-btn-interactive-bg: $color-gray-35;
 
 $footer-bg: $color-ivory;
+
+$selection-bg: $color-yellow-gold-lighter;
 
 ////
 // Font-size

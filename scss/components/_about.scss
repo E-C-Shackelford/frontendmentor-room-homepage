@@ -1,2 +1,54 @@
 @use "../variables";
 @use "../mixins";
+
+.c-about {
+  display: grid;
+  @include mixins.grid-layout();
+  grid-template-areas:
+    "image-dark"
+    "description"
+    "image-light";
+
+  @media (min-width: 768px) {
+    @include mixins.grid-layout(1fr 0.7fr, 200px 1fr);
+    grid-template-areas:
+      "description image-dark"
+      "description image-light";
+    border-block-start: 1px solid variables.$color-gray-85;
+  }
+
+  @media (min-width: 900px) {
+    border-block-start: none;
+  }
+
+  @media (min-width: 1024px) {
+    @include mixins.grid-layout(0.6fr 1fr 0.6fr, auto);
+    grid-template-areas:
+      "image-dark description image-light"
+      "image-dark description image-light";
+  }
+
+  &__image--dark {
+    grid-area: image-dark;
+    @include mixins.height(100%);
+  }
+
+  &__description {
+    grid-area: description;
+    @include mixins.padding(56px 0 48px);
+    gap: variables.$gap-sm;
+
+    @media (min-width: 768px) {
+      @include mixins.width(90%);
+      @include mixins.max-width();
+      align-self: center;
+      @include mixins.padding(64px 24px 40px);
+    }
+  }
+
+  &__image--light {
+    grid-area: image-light;
+    margin-block-end: 56px;
+    @include mixins.height(100%);
+  }
+}

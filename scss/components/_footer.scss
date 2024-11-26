@@ -1,2 +1,43 @@
 @use "../variables";
 @use "../mixins";
+
+.c-footer {
+  @include mixins.padding(48px 0 16px);
+  background-color: variables.$footer-bg;
+
+  &__attribution {
+    text-align: center;
+    color: variables.$attr-text-color;
+
+    &-link:link,
+    &-link:visited {
+      @include mixins.position();
+      color: variables.$attr-link-color;
+      transition: color 0.3s ease-in-out;
+
+      &::after,
+      &::after {
+        content: "";
+        @include mixins.position-absolute-bottom-left(-4px, 50%);
+        @include mixins.width(0);
+        @include mixins.height(2px);
+        background-color: variables.$attr-link-interactive-color;
+        transform: translateX(-50%);
+        transition: width 0.3s ease-in-out;
+      }
+    }
+
+    &-link:hover,
+    &-link:focus,
+    &-link:active {
+      color: variables.$attr-link-interactive-color;
+      &::after,
+      &::after,
+      &::after {
+        @include mixins.width(100%);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

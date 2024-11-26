@@ -62,3 +62,8 @@ h2 {
   @include mixins.text-transform();
   font-weight: variables.$font-weight-bold;
 }
+
+*::selection {
+  background-color: variables.$selection-bg;
+  color: variables.$color-near-black;
+}
