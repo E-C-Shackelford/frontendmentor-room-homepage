@@ -65,5 +65,5 @@ h2 {
 
 *::selection {
   background-color: variables.$selection-bg;
-  color: variables.$color-near-black;
+  color: variables.$selection-text-color;
 }
