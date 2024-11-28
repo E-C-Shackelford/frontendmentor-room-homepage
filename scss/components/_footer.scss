@@ -2,12 +2,17 @@
 @use "../mixins";
 
 .c-footer {
-  @include mixins.padding(48px 0 16px);
+  @include mixins.padding(48px 0 24px);
   background-color: variables.$footer-bg;
 
   &__attribution {
     text-align: center;
     color: variables.$attr-text-color;
+    width: 90%;
+
+    & span {
+      @include mixins.display-responsive(block, min-width, 427px, inline);
+    }
 
     &-link:link,
     &-link:visited {

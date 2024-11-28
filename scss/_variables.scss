@@ -6,7 +6,7 @@
 
 $color-ivory: hsl(60, 20%, 94%);
 $color-gray-85: hsl(0, 0%, 85%);
-$color-gray-40: hsl(0, 0%, 40%);
+$color-gray-40: hsl(0, 0%, 45%);
 $color-gray-35: hsl(0, 0%, 35%);
 $color-gray-30: hsl(0, 0%, 30%);
 $color-gray-17: hsl(0, 0%, 17%);
@@ -49,6 +49,8 @@ $nav-btn-interactive-bg: $color-gray-35;
 $footer-bg: $color-ivory;
 
 $selection-bg: $color-yellow-gold-lighter;
+
+$section-border-color: $color-gray-85;
 
 ////
 // Font-size

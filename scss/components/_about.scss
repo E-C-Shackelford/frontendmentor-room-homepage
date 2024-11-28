@@ -8,16 +8,19 @@
     "image-dark"
     "description"
     "image-light";
+  margin-block-end: 80px;
 
   @media (min-width: 768px) {
     @include mixins.grid-layout(1fr 0.7fr, 200px 1fr);
     grid-template-areas:
       "description image-dark"
       "description image-light";
-    border-block-start: 1px solid variables.$color-gray-85;
+    margin-block-end: 96px;
+    border-block-start: 1px solid variables.$section-border-color;
+    border-block-end: 1px solid variables.$section-border-color;
   }
 
-  @media (min-width: 900px) {
+  @media (min-width: 925px) {
     border-block-start: none;
   }
 

@@ -1,4 +1,5 @@
 @use "variables";
+
 ////
 // Layout
 ////
@@ -22,12 +23,13 @@
 
 @mixin position-responsive(
   $mobile-position: relative,
-  $breakpoint: 820px,
+  $query-type: min-width,
+  $breakpoint: 925px,
   $responsive-position: static
 ) {
   position: $mobile-position;
 
-  @media (min-width: #{$breakpoint}) {
+  @media (#{$query-type}: #{$breakpoint}) {
     position: $responsive-position;
   }
 }
@@ -79,7 +81,7 @@
 @mixin display-responsive(
   $mobile-display: none,
   $query-type: min-width,
-  $breakpoint: 820px,
+  $breakpoint: 925px,
   $responsive-display: block
 ) {
   display: $mobile-display;

@@ -8,7 +8,7 @@
       "image"
       "cta";
 
-    @media (min-width: 900px) {
+    @media (min-width: 925px) {
       @include mixins.grid-layout(1fr 0.7fr, auto);
       grid-template-areas: "image cta";
     }
@@ -25,17 +25,13 @@
 
   &__image-container {
     grid-area: image;
-    @include mixins.position-responsive(relative, 900px, static);
+    @include mixins.position-responsive();
     @include mixins.height(100%);
-
-    @media (min-width: 900px) {
-      @include mixins.position(static);
-    }
   }
 
   &__image,
   &__img {
-    @include mixins.position-responsive(relative, 900px, static);
+    @include mixins.position-responsive();
     @include mixins.width(100%);
     @include mixins.height(100%);
   }
@@ -43,7 +39,7 @@
   &__cta-container {
     grid-area: cta;
 
-    @media (min-width: 900px) {
+    @media (min-width: 925px) {
       @include mixins.position();
     }
   }
@@ -54,7 +50,7 @@
     gap: variables.$gap-sm-med;
     @include mixins.padding(56px 0 64px);
 
-    @media (min-width: 900px) {
+    @media (min-width: 925px) {
       @include mixins.width(90%);
       @include mixins.max-width();
       @include mixins.padding(64px 16px 104px);
@@ -68,7 +64,7 @@
   &__detail {
     margin-block-end: 16px;
 
-    @media (min-width: 900px) {
+    @media (min-width: 925px) {
       margin-block-end: 8px;
     }
   }
@@ -105,7 +101,7 @@
 
   &__nav {
     &--image {
-      @media (max-width: 899px) {
+      @media (max-width: 924px) {
         @include mixins.display-advanced(flex);
         @include mixins.justify-content();
         @include mixins.align-items();
@@ -117,9 +113,9 @@
     }
 
     &--cta {
-      @include mixins.display-responsive(none, min-width, 900px, flex);
+      @include mixins.display-responsive(none, min-width, 925px, flex);
 
-      @media (min-width: 900px) {
+      @media (min-width: 925px) {
         @include mixins.justify-content();
         @include mixins.align-items();
         @include mixins.width(max-content);
