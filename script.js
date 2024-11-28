@@ -4,6 +4,7 @@ const closeToggle = document.querySelector(".c-nav__close-toggle");
 const navList = document.querySelector(".c-nav__list");
 const overlay = document.querySelector(".c-overlay");
 const mobileCutOffBreakpoint = 820;
+const navLinks = document.querySelectorAll(".c-nav__link");
 
 ////
 // Nav Scroll Effect
@@ -55,6 +56,13 @@ function toggleNavPanel(isOpen) {
 menuToggle.addEventListener("click", () => toggleNavPanel(true));
 // closing navigation panel
 closeToggle.addEventListener("click", () => toggleNavPanel(false));
+
+// click a navigation link –> close panel and hide overlay
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    toggleNavPanel(false);
+  });
+});
 
 ////
 // Nav Behavior with Screen Resize
