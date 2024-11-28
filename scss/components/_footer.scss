@@ -27,7 +27,7 @@
         @include mixins.width(0);
         @include mixins.height(2px);
         background-color: variables.$attr-link-interactive-color;
-        transform: translateX(-50%);
+        @include mixins.transform("translateX", -50%);
         transition: width 0.3s ease-in-out;
       }
     }
@@ -41,7 +41,7 @@
       &::after {
         @include mixins.width(100%);
         left: 50%;
-        transform: translateX(-50%);
+        @include mixins.transform("translateX", -50%);
       }
     }
   }

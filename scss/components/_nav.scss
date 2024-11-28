@@ -91,12 +91,12 @@
     @include mixins.position-top-left(fixed, 35px, 0);
     @include mixins.z-index(99);
     @include mixins.width(100%);
-    transform: translateX(-200%);
+    @include mixins.transform("translateX", -200%);
     transition: transform 0.3s ease-in-out;
 
     &.active {
       @include mixins.display-advanced(flex);
-      transform: translateX(0);
+      @include mixins.transform("translateX");
     }
 
     @media (min-width: 364px) {
@@ -110,7 +110,7 @@
     @media (min-width: 820px) {
       @include mixins.position-top-left(static, auto, auto);
       @include mixins.width(max-content);
-      transform: none;
+      @include mixins.transform("none");
       background-color: transparent;
     }
   }
@@ -133,7 +133,7 @@
       @include mixins.width(0);
       @include mixins.height(2px);
       background-color: variables.$nav-link-mobile-color;
-      transform: translateX(-50%);
+      @include mixins.transform("translateX", -50%);
       transition: width 0.3s ease-in-out;
 
       @media (min-width: 820px) {
@@ -150,7 +150,7 @@
     &::after {
       @include mixins.width(50%);
       left: 50%;
-      transform: translateX(-50%);
+      @include mixins.transform("translateX", -50%);
     }
   }
 

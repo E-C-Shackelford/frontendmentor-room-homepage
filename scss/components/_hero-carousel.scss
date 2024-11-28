@@ -86,7 +86,7 @@
   &__link:focus,
   &__link:active {
     color: variables.$section-link-interactive-color;
-    transform: scale(1.04);
+    @include mixins.transform("scale", 1.04);
   }
 
   &__link-arrow {

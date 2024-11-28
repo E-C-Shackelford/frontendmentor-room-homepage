@@ -103,3 +103,26 @@
 @mixin text-transform($text-transform: uppercase) {
   text-transform: $text-transform;
 }
+
+////
+// Animation
+////
+
+// if a value is passed, it's used, and if no value is passed, a default value is passed
+@mixin transform($transform-type, $transform-value: null) {
+  @if $transform-type == "translateX" {
+    @if $transform-value != null {
+      transform: translateX(#{$transform-value});
+    } @else {
+      transform: translateX(0);
+    }
+  } @else if $transform-type == "scale" {
+    @if $transform-value != null {
+      transform: scale(#{$transform-value});
+    } @else {
+      transform: scale(1);
+    }
+  } @else if $transform-type == "none" {
+    transform: none;
+  }
+}
