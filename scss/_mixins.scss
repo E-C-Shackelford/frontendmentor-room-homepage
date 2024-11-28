@@ -108,7 +108,8 @@
 // Animation
 ////
 
-// if a value is passed, it's used, and if no value is passed, a default value is passed
+// if a value is passed, it's used, and if no value is passed, a default value is used,
+// and if 'none' is specified as the transform type, no transform is applied
 @mixin transform($transform-type, $transform-value: null) {
   @if $transform-type == "translateX" {
     @if $transform-value != null {
